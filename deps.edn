@@ -6,7 +6,7 @@
 
  :aliases {:dev {:extra-deps {nrepl/nrepl {:mvn/version "0.9.0"}
                               org.clojure/tools.namespace {:mvn/version "1.2.0"}}
-                 :extra-paths ["dev"]
+                 :extra-paths ["dev", "test"]
                  :jvm-opts ["-Dgiantbomb.server.name=www.giantbomb.com"
                             "-Dcartridge.castle.user.agent=CartridgeCastleBot1.0"
                             "-Djavax.net.ssl.trustStore=cacerts"]
