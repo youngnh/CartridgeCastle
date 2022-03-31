@@ -1,0 +1,13 @@
+{:deps {aleph/aleph {:mvn/version "0.4.7"}
+        environ/environ {:mvn/version "1.2.0"}
+        manifold/manifold {:mvn/version "0.2.3"}
+        metosin/jsonista {:mvn/version "0.3.5"}
+        org.clojure/clojure {:mvn/version "1.11.0"}}
+
+ :aliases {:dev {:extra-deps {nrepl/nrepl {:mvn/version "0.9.0"}
+                              org.clojure/tools.namespace {:mvn/version "1.2.0"}}
+                 :extra-paths ["dev"]
+                 :jvm-opts ["-Dgiantbomb.server.name=www.giantbomb.com"
+                            "-Dcartridge.castle.user.agent=CartridgeCastleBot1.0"
+                            "-Djavax.net.ssl.trustStore=cacerts"]
+                 :main-opts ["-m" "nrepl.cmdline"]}}}
