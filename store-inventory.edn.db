@@ -1,0 +1,4 @@
+{:customer {}
+ :inventory {"3030-5415" {:checked-out 0 :on-shelf 4}
+             "3030-52647" {:checked-out 0 :on-shelf 3}
+             "3030-37152" {:checked-out 0 :on-shelf 6}}}

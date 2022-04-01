@@ -11,4 +11,5 @@
 
   @(api/games {:filter "name:DOOM"})
 
-  (def server (server/start-server)))
+  (def server (server/start-server))
+  (server/stop-server server))
