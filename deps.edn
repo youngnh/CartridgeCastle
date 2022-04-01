@@ -1,7 +1,11 @@
 {:deps {aleph/aleph {:mvn/version "0.4.7"}
+        compojure/compojure {:mvn/version "1.6.2"}
         environ/environ {:mvn/version "1.2.0"}
+        hiccup/hiccup {:mvn/version "1.0.5"}
+        liberator/liberator {:mvn/version "0.15.3"}
         manifold/manifold {:mvn/version "0.2.3"}
         metosin/jsonista {:mvn/version "0.3.5"}
+        ring/ring {:mvn/version "1.9.5"}
         org.clojure/clojure {:mvn/version "1.11.0"}}
 
  :aliases {:dev {:extra-deps {nrepl/nrepl {:mvn/version "0.9.0"}
@@ -9,5 +13,11 @@
                  :extra-paths ["dev", "test"]
                  :jvm-opts ["-Dgiantbomb.server.name=www.giantbomb.com"
                             "-Dcartridge.castle.user.agent=CartridgeCastleBot1.0"
+                            "-Dcartridge.castle.server.port=8080"
                             "-Djavax.net.ssl.trustStore=cacerts"]
-                 :main-opts ["-m" "nrepl.cmdline"]}}}
+                 :main-opts ["-m" "nrepl.cmdline"]}
+
+           :server {:main-opts ["-m" "castle.cartridge.server"]
+                    :jvm-opts ["-Dgiantbomb.server.name=www.giantbomb.com"
+                               "-Dcartridge.castle.user.agent=CartridgeCastleBot1.0"
+                               "-Dcartridge.castle.server.port=8080"]}}}

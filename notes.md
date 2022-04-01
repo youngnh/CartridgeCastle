@@ -8,7 +8,11 @@ first, put your GiantBomb api key in an environment variable:
 
 then start a repl
 
-> clj -A:dev
+> clj -M:dev
+
+## To start a standalone server
+
+> clj -M:server
 
 ## Rough Plan
 
@@ -22,7 +26,14 @@ then start a repl
     - text/html
       - hiccup to render pages
 
-- /checkout api
+  - GET /search?{giantbomb params passthrough}
+  - GET /game/:id
+  - POST /customer/:cid/rentals
+    guid: {game uid}
+  - PUT /customer/:cid/rental/:guid
+  - DELETE /customer/:cid/rental/:guid
+
+- inventory api
   - in-memory Clojure ref
   - STM transactions to check out games
     - poor man's durability by writing edn to a file on server shutdown
