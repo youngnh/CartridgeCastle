@@ -167,7 +167,7 @@
       (ref-set customer (table-rowize (:customer snapshot))))))
 
 (defn create
-  "Return a Inventory backed by in-memory STM"
+  "Return an Inventory backed by in-memory STM"
   []
   (->STMInventory))
 
